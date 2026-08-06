@@ -5,6 +5,7 @@
   "main": "index.html",
   "scripts": {
     "dev": "npx serve -l 3000 .",
+    "build": "echo 'Static site ready for Vercel'",
     "start": "npx serve -l 3000 ."
   },
   "keywords": ["ortopedia", "traumatologia", "protese-quadril", "protese-joelho", "sao-roque"],
