@@ -72,9 +72,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         requestAnimationFrame(raf);
+        lenis.on('scroll', activateScrollSpy);
     }
 
-    window.addEventListener('scroll', activateScrollSpy);
+    window.addEventListener('scroll', activateScrollSpy, { passive: true });
     activateScrollSpy(); // Chamada inicial ao carregar a página
 
     /* Clique suave universal em todos os links da página */
