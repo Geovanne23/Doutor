@@ -376,61 +376,121 @@
             </div>
         </section>
 
-        <!-- Pricing Section (Unificado com 1 Bloco Oficial de Preços) -->
+        <!-- Pricing & Appointment Section -->
         <section id="precos" class="precos-section">
             <div class="container">
                 <div class="section-header text-center">
-                    <span class="section-tag">INVESTIMENTO EM SUA SAÚDE</span>
-                    <h2 class="section-title">Valores das Consultas</h2>
+                    <span class="section-tag">INVESTIMENTO & AGENDAMENTO</span>
+                    <h2 class="section-title">Valores das Consultas e Agendamento Online</h2>
                     <p class="section-description">
-                        Transparência total nos custos com atendimento de excelência e clareza em todas as etapas.
+                        Transparência total nos custos e facilidade para agendar sua consulta diretamente pelo WhatsApp.
                     </p>
                 </div>
 
-                <div class="single-price-wrapper" style="max-width: 680px; margin: 0 auto;">
-                    <div class="precos-lista-box">
-                        <div class="precos-lista-header text-center" style="margin-bottom: 20px;">
-                            <h3 style="font-size: 1.35rem; color: var(--primary-dark); font-family: var(--font-heading);"><i class="fa-solid fa-tag" style="color: var(--accent-teal);"></i> Tabela Oficial de Valores</h3>
-                        </div>
-
-                        <div class="precos-table-grid">
-                            <div class="preco-item-row">
-                                <div class="preco-item-info">
-                                    <i class="fa-solid fa-stethoscope"></i>
-                                    <span>Primeira consulta ortopedia e traumatologia</span>
-                                </div>
-                                <div class="preco-item-value">350 BRL</div>
+                <div class="pricing-grid-wrapper">
+                    
+                    <!-- Left Column: Tabela Oficial de Valores -->
+                    <div class="pricing-col">
+                        <div class="precos-lista-box" style="margin-top: 0;">
+                            <div class="precos-lista-header text-center" style="margin-bottom: 20px;">
+                                <h3 style="font-size: 1.35rem; color: var(--primary-dark); font-family: var(--font-heading);">
+                                    <i class="fa-solid fa-tag" style="color: var(--accent-teal);"></i> Tabela Oficial de Valores
+                                </h3>
                             </div>
 
-                            <div class="preco-item-row">
-                                <div class="preco-item-info">
-                                    <i class="fa-solid fa-user-doctor"></i>
-                                    <span>Consulta ortopedia e traumatologia</span>
+                            <div class="precos-table-grid">
+                                <div class="preco-item-row">
+                                    <div class="preco-item-info">
+                                        <i class="fa-solid fa-stethoscope"></i>
+                                        <span>Primeira consulta ortopedia e traumatologia</span>
+                                    </div>
+                                    <div class="preco-item-value">350 BRL</div>
                                 </div>
-                                <div class="preco-item-value">350 BRL</div>
+
+                                <div class="preco-item-row">
+                                    <div class="preco-item-info">
+                                        <i class="fa-solid fa-user-doctor"></i>
+                                        <span>Consulta ortopedia e traumatologia</span>
+                                    </div>
+                                    <div class="preco-item-value">350 BRL</div>
+                                </div>
+
+                                <div class="preco-item-row">
+                                    <div class="preco-item-info">
+                                        <i class="fa-solid fa-laptop-medical"></i>
+                                        <span>Teleconsulta</span>
+                                    </div>
+                                    <div class="preco-item-value">250 BRL</div>
+                                </div>
+
+                                <div class="preco-item-row">
+                                    <div class="preco-item-info">
+                                        <i class="fa-solid fa-clock-rotate-left"></i>
+                                        <span>Encaixe Telemedicina</span>
+                                    </div>
+                                    <div class="preco-item-value">250 BRL</div>
+                                </div>
                             </div>
 
-                            <div class="preco-item-row">
-                                <div class="preco-item-info">
-                                    <i class="fa-solid fa-laptop-medical"></i>
-                                    <span>Teleconsulta</span>
-                                </div>
-                                <div class="preco-item-value">250 BRL</div>
+                            <div class="price-footer-notice text-center" style="margin-top: 24px; padding-top: 18px; border-top: 1px dashed var(--border-color); font-size: 0.88rem; color: var(--text-muted);">
+                                <i class="fa-solid fa-file-invoice-dollar" style="color: var(--accent-teal);"></i> Emitimos nota fiscal e laudo médico detalhado para <strong>reembolso junto ao seu plano de saúde</strong> (Bradesco, SulAmérica, Amil, Porto Seguro, Unimed, etc.).
                             </div>
-
-                            <div class="preco-item-row">
-                                <div class="preco-item-info">
-                                    <i class="fa-solid fa-clock-rotate-left"></i>
-                                    <span>Encaixe Telemedicina</span>
-                                </div>
-                                <div class="preco-item-value">250 BRL</div>
-                            </div>
-                        </div>
-
-                        <div class="price-footer-notice text-center" style="margin-top: 24px; padding-top: 18px; border-top: 1px dashed var(--border-color); font-size: 0.88rem; color: var(--text-muted);">
-                            <i class="fa-solid fa-file-invoice-dollar" style="color: var(--accent-teal);"></i> Emitimos nota fiscal e laudo médico detalhado para <strong>reembolso junto ao seu plano de saúde</strong> (Bradesco, SulAmérica, Amil, Porto Seguro, Unimed, etc.).
                         </div>
                     </div>
+
+                    <!-- Right Column: Form Widget de Agendamento (id="agendar") -->
+                    <div class="booking-col" id="agendar">
+                        <div class="booking-widget-box">
+                            <div class="widget-header">
+                                <h3><i class="fa-regular fa-calendar-check"></i> Agendar sua Consulta</h3>
+                                <p>Selecione a opção desejada e envie a mensagem direto ao WhatsApp do Dr. Rafael.</p>
+                            </div>
+
+                            <form id="bookingForm" class="booking-form">
+                                <div class="form-group">
+                                    <label for="consultType"><i class="fa-solid fa-stethoscope"></i> Tipo de Atendimento</label>
+                                    <select id="consultType" class="form-control" required>
+                                        <option value="Primeira Consulta Presencial (São Roque) - R$350">Primeira Consulta Presencial (São Roque - R$ 350)</option>
+                                        <option value="Consulta ortopedia e traumatologia - R$350">Consulta ortopedia e traumatologia (R$ 350)</option>
+                                        <option value="Teleconsulta Online - R$250">Teleconsulta Online / Telemedicina (R$ 250)</option>
+                                        <option value="Encaixe Telemedicina - R$250">Encaixe Telemedicina (R$ 250)</option>
+                                        <option value="Avaliação para Prótese de Quadril / Joelho">Avaliação Cirúrgica (Prótese de Quadril / Joelho)</option>
+                                        <option value="Infiltração de Articulação / Joelho / Coluna">Procedimento de Infiltração Guiada</option>
+                                        <option value="Retorno de Consulta">Retorno de Consulta</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="patientName"><i class="fa-solid fa-user"></i> Nome Completo do Paciente</label>
+                                    <input type="text" id="patientName" class="form-control" placeholder="Digite seu nome completo" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="patientPhone"><i class="fa-solid fa-phone"></i> Seu Telefone / WhatsApp</label>
+                                    <input type="tel" id="patientPhone" class="form-control" placeholder="(11) 99999-9999" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="preferredTime"><i class="fa-solid fa-clock"></i> Preferência de Horário</label>
+                                    <select id="preferredTime" class="form-control">
+                                        <option value="Período da Manhã">Manhã</option>
+                                        <option value="Período da Tarde">Tarde</option>
+                                        <option value="Primeiro Horário Disponível">Primeiro horário disponível</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="patientNotes"><i class="fa-solid fa-message"></i> Qual a sua principal dor ou motivo?</label>
+                                    <textarea id="patientNotes" class="form-control" rows="3" placeholder="Ex: Dor no quadril ao caminhar, artrose no joelho, fratura, etc."></textarea>
+                                </div>
+
+                                <button type="submit" class="btn btn-whatsapp btn-block btn-lg">
+                                    <i class="fa-brands fa-whatsapp"></i> Confirmar Agendamento no WhatsApp
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
