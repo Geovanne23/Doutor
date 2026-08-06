@@ -820,33 +820,45 @@ ul {
     flex-wrap: wrap;
     gap: 12px;
     margin-bottom: 48px;
+    position: relative;
+    z-index: 2;
 }
 
 .tab-btn {
     background-color: #FFFFFF;
     color: var(--text-muted);
     border: 1px solid var(--border-color);
-    padding: 12px 24px;
+    padding: 13px 26px;
     border-radius: var(--radius-full);
     font-family: var(--font-heading);
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.92rem;
     cursor: pointer;
-    transition: var(--transition);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    user-select: none;
 }
 
-.tab-btn:hover,
+.tab-btn:hover {
+    color: var(--primary-dark);
+    border-color: var(--accent-teal);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 173, 181, 0.12);
+}
+
 .tab-btn.active {
-    background: linear-gradient(135deg, var(--primary-blue), var(--primary-dark));
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-blue));
     color: #FFFFFF;
     border-color: transparent;
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 8px 24px rgba(30, 62, 98, 0.28);
+    transform: translateY(-2px) scale(1.03);
 }
 
 .spec-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
     gap: 30px;
+    will-change: opacity, transform;
 }
 
 .spec-card {
@@ -855,15 +867,16 @@ ul {
     padding: 36px 30px;
     border: 1px solid var(--border-color);
     box-shadow: var(--shadow-sm);
-    transition: var(--transition);
+    transition: box-shadow 0.35s ease, border-color 0.35s ease, transform 0.35s ease;
     display: flex;
     flex-direction: column;
+    will-change: opacity, transform;
 }
 
 .spec-card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow-md);
-    border-color: rgba(0, 173, 181, 0.3);
+    transform: translateY(-8px) scale(1.01) !important;
+    box-shadow: 0 20px 40px rgba(30, 62, 98, 0.12);
+    border-color: rgba(0, 173, 181, 0.4);
 }
 
 .card-icon {

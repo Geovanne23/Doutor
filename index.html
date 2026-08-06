@@ -105,8 +105,8 @@
                             target="_blank" class="btn btn-whatsapp btn-lg">
                             <i class="fa-brands fa-whatsapp"></i> Agendar pelo WhatsApp
                         </a>
-                        <a href="#sobre" class="btn btn-outline btn-lg">
-                            <i class="fa-solid fa-user-doctor"></i> Saber Mais Sobre o Doutor
+                        <a href="#especialidades" class="btn btn-outline btn-lg">
+                            <i class="fa-solid fa-stethoscope"></i> Conhecer Tratamentos
                         </a>
                     </div>
 
@@ -170,123 +170,74 @@
             </div>
         </section>
 
-        <!-- About Section (Informações sobre mim & Agenda no Lado Direito) -->
+        <!-- About Section -->
         <section id="sobre" class="sobre-section">
-            <div class="container sobre-container-grid">
-                
-                <!-- Left Column: Informações sobre mim & Credenciais -->
-                <div class="sobre-text-col">
-                    <span class="section-tag">INFORMAÇÕES SOBRE MIM</span>
-                    <h2 class="section-title">Dr. Rafael Henrique Fernandes Giorgeto</h2>
-                    
-                    <p class="paragraph-lead">
-                        Olá! Sou o <strong>Dr. Rafael Henrique Fernandes Giorgeto</strong>, ortopedista e traumatologista. Atendo em consultório particular em São Roque (SP) com foco em devolver sua mobilidade e qualidade de vida, unindo acolhimento, precisão diagnóstica e segurança em cada etapa.
-                    </p>
-                    <p class="paragraph">
-                        Na consulta detalhada, analiso minuciosamente seu caso para oferecer tratamento individualizado para dor, artrose, artroplastias, infiltrações de coluna, quadril e joelho, prótese de quadril e joelho e trauma ortopédico. Eu e minha equipe estamos prontos para te acompanhar com ética, evidência científica e clareza de custos.
-                    </p>
-                    <p class="paragraph">
-                        Atendo nos hospitais <strong>São Francisco</strong> (São Roque e Osasco), <strong>São Luiz</strong> (Guarulhos e Alphaville) e <strong>Lefort Liberdade</strong> (São Paulo), e realizo minhas cirurgias nesses hospitais e também no <strong>Hospital Evangélico de Sorocaba</strong>—estrutura de confiança para quem busca cuidado especializado.
-                    </p>
-
-                    <div class="agenda-notice-pill">
-                        <i class="fa-solid fa-calendar-check"></i>
-                        <div>
-                            <strong>Agendamento & Avaliações:</strong><br>
-                            Agende uma consulta utilizando a <strong>agenda disponível ao lado direito da página</strong> e confira as avaliações de outros pacientes. Para mais informações, entre em contato.
+            <div class="container sobre-container">
+                <div class="sobre-image-col">
+                    <div class="image-stack">
+                        <img src="./public/assets/images/photo_1.jpg" alt="Dr. Rafael em procedimento médico"
+                            class="stack-img main-img">
+                        <img src="./public/assets/images/photo_3.jpg" alt="Consultório Dr Rafael Giorgeto"
+                            class="stack-img sub-img">
+                        <div class="experience-card">
+                            <span class="exp-number">100%</span>
+                            <span class="exp-text">Foco na Ética e Evidência Científica</span>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Credenciais Grid -->
+                <div class="sobre-text-col">
+                    <span class="section-tag">COMPROMISSO COM SUA SAÚDE</span>
+                    <h2 class="section-title">Cuidado humanizado, acolhimento e precisão diagnóstica</h2>
+                    <p class="paragraph-lead">
+                        Olá! Sou o <strong>Dr. Rafael Henrique Fernandes Giorgeto</strong>, ortopedista e
+                        traumatologista. Atendo em consultório particular na <strong>SR Clínica em São Roque
+                            (SP)</strong> com dedicação exclusiva para devolver sua mobilidade e bem-estar.
+                    </p>
+                    <p class="paragraph">
+                        Na consulta detalhada, analiso minuciosamente o histórico de cada paciente, combinando exames
+                        físicos e de imagem para diagnosticar as causas exatas das dores e limitação funcional. Atuo
+                        desde procedimentos minimamente invasivos (como infiltrações guiadas de quadril, joelho e
+                        coluna) até cirurgias complexas de prótese de quadril e joelho.
+                    </p>
+
                     <div class="credentials-grid">
-                        <div class="credential-item">
-                            <i class="fa-solid fa-id-card"></i>
-                            <div>
-                                <h4>Número de Registro</h4>
-                                <p><strong>CRM SP:</strong> 226005 | <strong>RQE Nº:</strong> 137898</p>
-                            </div>
-                        </div>
                         <div class="credential-item">
                             <i class="fa-solid fa-graduation-cap"></i>
                             <div>
                                 <h4>Formação Acadêmica</h4>
-                                <p>Faculdade de Medicina de Catanduva<br>Residência no Conjunto Hospitalar do Mandaqui</p>
+                                <p>Faculdade de Medicina de Catanduva</p>
+                            </div>
+                        </div>
+                        <div class="credential-item">
+                            <i class="fa-solid fa-hospital-user"></i>
+                            <div>
+                                <h4>Residência Médica</h4>
+                                <p>Conjunto Hospitalar do Mandaqui</p>
+                            </div>
+                        </div>
+                        <div class="credential-item">
+                            <i class="fa-solid fa-id-card"></i>
+                            <div>
+                                <h4>Registros Oficiais</h4>
+                                <p>CRM SP 226005 | RQE Nº 137898</p>
                             </div>
                         </div>
                         <div class="credential-item">
                             <i class="fa-solid fa-language"></i>
                             <div>
-                                <h4>Idiomas de Atendimento</h4>
+                                <h4>Atendimento Multilíngue</h4>
                                 <p>Português e Inglês</p>
                             </div>
                         </div>
-                        <div class="credential-item">
-                            <i class="fa-solid fa-book-bookmark"></i>
-                            <div>
-                                <h4>Publicação Científica</h4>
-                                <p>Trabalho Sobre Fraturas de Planalto Tibial</p>
-                            </div>
-                        </div>
+                    </div>
+
+                    <div class="sobre-cta">
+                        <a href="#agendar" class="btn btn-primary">
+                            <i class="fa-solid fa-calendar-check"></i> Agendar Consulta Avaliativa
+                        </a>
                     </div>
                 </div>
-
-                <!-- Right Column: AGENDA DISPONÍVEL AO LADO DIREITO DA PÁGINA -->
-                <div class="booking-sidebar-col" id="agendar">
-                    <div class="booking-widget-box sticky-widget">
-                        <div class="widget-header text-center">
-                            <span class="badge-pill-right"><i class="fa-regular fa-calendar-check"></i> AGENDA DISPONÍVEL AO LADO DIREITO</span>
-                            <h3>Agendar sua Consulta</h3>
-                            <p>Selecione a opção desejada e envie sua solicitação direto para o WhatsApp do Dr. Rafael.</p>
-                        </div>
-
-                        <form id="bookingForm" class="booking-form">
-                            <div class="form-group">
-                                <label for="consultType"><i class="fa-solid fa-stethoscope"></i> Tipo de Atendimento</label>
-                                <select id="consultType" class="form-control" required>
-                                    <option value="Primeira Consulta Presencial (São Roque) - R$350">Consulta Presencial (São Roque - R$ 350)</option>
-                                    <option value="Teleconsulta Online - R$250">Teleconsulta Online / Telemedicina (R$ 250)</option>
-                                    <option value="Avaliação para Prótese de Quadril / Joelho">Avaliação Cirúrgica (Prótese de Quadril / Joelho)</option>
-                                    <option value="Infiltração de Articulação / Joelho / Coluna">Procedimento de Infiltração Guiada</option>
-                                    <option value="Retorno de Consulta">Retorno de Consulta</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="patientName"><i class="fa-solid fa-user"></i> Nome Completo do Paciente</label>
-                                <input type="text" id="patientName" class="form-control" placeholder="Digite seu nome completo" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="patientPhone"><i class="fa-solid fa-phone"></i> Seu Telefone / WhatsApp</label>
-                                <input type="tel" id="patientPhone" class="form-control" placeholder="(11) 99999-9999" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="preferredTime"><i class="fa-solid fa-clock"></i> Preferência de Horário</label>
-                                <select id="preferredTime" class="form-control">
-                                    <option value="Período da Manhã">Manhã</option>
-                                    <option value="Período da Tarde">Tarde</option>
-                                    <option value="Primeiro Horário Disponível">Primeiro horário disponível</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="patientNotes"><i class="fa-solid fa-message"></i> Qual a sua principal dor ou motivo?</label>
-                                <textarea id="patientNotes" class="form-control" rows="2" placeholder="Ex: Dor no quadril ao caminhar, artrose no joelho, fratura, etc."></textarea>
-                            </div>
-
-                            <button type="submit" class="btn btn-whatsapp btn-block btn-lg">
-                                <i class="fa-brands fa-whatsapp"></i> Confirmar Agendamento no WhatsApp
-                            </button>
-                        </form>
-
-                        <div class="widget-footer-info text-center">
-                            <p><i class="fa-solid fa-file-invoice-dollar"></i> Recibo/Laudo para <strong>reembolso de convênios</strong> (Bradesco, SulAmérica, Amil, Porto Seguro, Unimed, etc.).</p>
-                            <a href="#depoimentos" class="link-reviews"><i class="fa-solid fa-star"></i> Confira as avaliações de outros pacientes</a>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </section>
 

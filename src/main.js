@@ -113,33 +113,58 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    /* 2. FILTERABLE SPECIALTIES TABS */
+    /* 2. ENHANCED FILTERABLE SPECIALTIES TABS */
     const filterBtns = document.querySelectorAll('.tab-btn');
     const specCards = document.querySelectorAll('.spec-card');
+    let isFiltering = false;
 
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
+            if (isFiltering || btn.classList.contains('active')) return;
+            isFiltering = true;
+
             // Remove active class from all buttons
             filterBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
 
             const filterValue = btn.getAttribute('data-filter');
 
+            // Phase 1: Animate all current cards out (fade & scale down)
             specCards.forEach(card => {
-                if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
-                    card.style.display = 'flex';
-                    setTimeout(() => {
-                        card.style.opacity = '1';
-                        card.style.transform = 'translateY(0)';
-                    }, 50);
-                } else {
-                    card.style.opacity = '0';
-                    card.style.transform = 'translateY(10px)';
-                    setTimeout(() => {
-                        card.style.display = 'none';
-                    }, 250);
-                }
+                card.style.transition = 'opacity 0.25s ease, transform 0.25s ease';
+                card.style.opacity = '0';
+                card.style.transform = 'scale(0.94) translateY(12px)';
             });
+
+            // Phase 2: After fade out, filter display and stagger animate matching cards in
+            setTimeout(() => {
+                let visibleIndex = 0;
+
+                specCards.forEach(card => {
+                    const matches = (filterValue === 'all' || card.getAttribute('data-category') === filterValue);
+
+                    if (matches) {
+                        card.style.display = 'flex';
+                        const delay = visibleIndex * 70; // 70ms stagger effect per card
+                        visibleIndex++;
+
+                        setTimeout(() => {
+                            card.style.transition = 'opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)';
+                            card.style.opacity = '1';
+                            card.style.transform = 'scale(1) translateY(0)';
+                        }, delay + 30);
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                // Reset lock after total stagger animation duration
+                const totalAnimationDuration = (visibleIndex * 70) + 400;
+                setTimeout(() => {
+                    isFiltering = false;
+                }, totalAnimationDuration);
+
+            }, 260);
         });
     });
 
