@@ -164,8 +164,8 @@
             <div class="container sobre-container">
                 <div class="sobre-image-col">
                     <div class="image-stack">
-                        <img src="./public/assets/images/photo_1.jpg" alt="Dr. Rafael Henrique Fernandes Giorgeto em atendimento" class="stack-img main-img">
-                        <img src="./public/assets/images/photo_3.jpg" alt="Consultório Dr Rafael Giorgeto em São Roque" class="stack-img sub-img">
+                        <img src="./public/assets/images/avatar.jpg" alt="Dr. Rafael Henrique Fernandes Giorgeto" class="stack-img main-img">
+                        <img src="./public/assets/images/photo_4.jpg" alt="Atendimento e Procedimentos Ortopédicos" class="stack-img sub-img">
                         <div class="experience-card">
                             <span class="exp-number">100%</span>
                             <span class="exp-text">Ética, Evidência Científica e Clareza de Custos</span>
@@ -186,59 +186,61 @@
                         Atendo nos hospitais <strong>São Francisco</strong> (São Roque e Osasco), <strong>São Luiz</strong> (Guarulhos e Alphaville) e <strong>Lefort Liberdade</strong> (São Paulo), e realizo minhas cirurgias nesses hospitais e também no <strong>Hospital Evangélico de Sorocaba</strong>—estrutura de confiança para quem busca cuidado especializado.
                     </p>
 
-                    <div class="paragraph-highlight">
-                        <i class="fa-solid fa-calendar-days"></i>
-                        <div>
-                            <strong>Agendamento & Avaliações:</strong><br>
-                            Agende uma consulta utilizando a <strong>agenda disponível ao lado direito da página</strong> e confira as avaliações de outros pacientes. Para mais informações, entre em contato.
+                    <!-- Agenda Callout Box -->
+                    <div class="agenda-callout-card">
+                        <div class="agenda-callout-header">
+                            <i class="fa-solid fa-calendar-check"></i>
+                            <div>
+                                <strong>Agenda Disponível ao Lado Direito da Página</strong>
+                                <span>Agende sua consulta rápida ou confira as avaliações de outros pacientes.</span>
+                            </div>
+                        </div>
+                        <div class="agenda-callout-actions">
+                            <a href="#agendar" class="btn btn-whatsapp btn-sm">
+                                <i class="fa-solid fa-calendar-days"></i> Ir para a Agenda
+                            </a>
+                            <a href="#depoimentos" class="btn btn-outline btn-sm">
+                                <i class="fa-solid fa-star"></i> Ver Avaliações
+                            </a>
                         </div>
                     </div>
 
                     <div class="credentials-grid">
                         <div class="credential-item">
-                            <i class="fa-solid fa-user-doctor"></i>
+                            <i class="fa-solid fa-id-card"></i>
                             <div>
                                 <h4>Número de Registro</h4>
-                                <p><strong>CRM SP:</strong> 226005<br><strong>RQE Nº:</strong> 137898</p>
+                                <p><strong>CRM SP:</strong> 226005 | <strong>RQE Nº:</strong> 137898</p>
                             </div>
                         </div>
                         <div class="credential-item">
                             <i class="fa-solid fa-graduation-cap"></i>
                             <div>
                                 <h4>Formação Acadêmica</h4>
-                                <p>Faculdade de Medicina de Catanduva<br>Conjunto Hospitalar do Mandaqui</p>
+                                <p>Faculdade de Medicina de Catanduva<br>Residência no Conjunto Hospitalar do Mandaqui</p>
                             </div>
                         </div>
                         <div class="credential-item">
                             <i class="fa-solid fa-language"></i>
                             <div>
-                                <h4>Idiomas</h4>
-                                <p>Português | Inglês</p>
+                                <h4>Idiomas de Atendimento</h4>
+                                <p>Português e Inglês</p>
                             </div>
                         </div>
                         <div class="credential-item">
                             <i class="fa-solid fa-book-bookmark"></i>
                             <div>
-                                <h4>Publicações</h4>
+                                <h4>Publicação Científica</h4>
                                 <p>Trabalho Sobre Fraturas de Planalto Tibial</p>
                             </div>
                         </div>
                         <div class="credential-item credential-full">
                             <i class="fa-solid fa-award"></i>
                             <div>
-                                <h4>Especialidades Principais</h4>
+                                <h4>Especialidades Registradas</h4>
                                 <p>Prótese de Quadril • Prótese do Joelho • Cirurgia do Trauma e Ortopedia • Ortopedia Geral</p>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="sobre-cta">
-                        <a href="#agendar" class="btn btn-primary">
-                            <i class="fa-solid fa-calendar-check"></i> Agendar na Agenda (Lado Direito)
-                        </a>
-                        <a href="#depoimentos" class="btn btn-outline">
-                            <i class="fa-solid fa-star"></i> Ver Avaliações de Pacientes
-                        </a>
                     </div>
                 </div>
             </div>
@@ -248,89 +250,126 @@
         <section id="especialidades" class="especialidades-section">
             <div class="container">
                 <div class="section-header text-center">
-                    <span class="section-tag">ESPECIALIDADES & DOENÇAS TRATADAS</span>
-                    <h2 class="section-title">Especialidades e Tratamentos Oferecidos</h2>
+                    <span class="section-tag">ÁREAS DE ATUAÇÃO & ESPECIALIDADES</span>
+                    <h2 class="section-title">Tratamentos Ortopédicos de Alta Precisão</h2>
                     <p class="section-description">
-                        Atendimento ortopédico completo com precisão diagnóstica, tratamentos conservadores e procedimentos cirúrgicos avançados.
+                        Conheça as especialidades médicas do Dr. Rafael Giorgeto para a saúde do quadril, joelho, coluna e traumatologia.
                     </p>
                 </div>
 
-                <!-- Category Filters -->
-                <div class="filter-tabs">
-                    <button class="tab-btn active" data-filter="all">Todos os Tratamentos</button>
-                    <button class="tab-btn" data-filter="proteses">Próteses & Artroplastias</button>
-                    <button class="tab-btn" data-filter="trauma">Cirurgia do Trauma & Ortopedia</button>
-                    <button class="tab-btn" data-filter="infiltracoes">Infiltrações & Dor</button>
-                    <button class="tab-btn" data-filter="doencas">Doenças Tratadas</button>
-                </div>
-
+                <!-- 4 Core Specialties Cards -->
                 <div class="spec-grid" id="specGrid">
                     
-                    <!-- Card 1 -->
-                    <div class="spec-card" data-category="proteses">
+                    <!-- Specialty 1 -->
+                    <div class="spec-card">
                         <div class="card-icon"><i class="fa-solid fa-joint"></i></div>
                         <h3>Prótese de Quadril</h3>
-                        <p>Artroplastia total ou parcial de quadril para tratamento de artrose de quadril grave, osteonecrose e fraturas. Recuperação da mobilidade e alívio da dor.</p>
+                        <p>Artroplastia total e parcial para dor articular severa, coxartrose, osteonecrose da cabeça femoral e fraturas de quadril com próteses de altíssima durabilidade.</p>
                         <ul class="spec-features">
-                            <li><i class="fa-solid fa-check"></i> Próteses importadas de alta durabilidade</li>
-                            <li><i class="fa-solid fa-check"></i> Planejamento digital cirúrgico</li>
+                            <li><i class="fa-solid fa-check"></i> Alívio completo da dor ao caminhar</li>
+                            <li><i class="fa-solid fa-check"></i> Planejamento pré-operatório digital</li>
                         </ul>
                     </div>
 
-                    <!-- Card 2 -->
-                    <div class="spec-card" data-category="proteses">
+                    <!-- Specialty 2 -->
+                    <div class="spec-card">
                         <div class="card-icon"><i class="fa-solid fa-child"></i></div>
                         <h3>Prótese do Joelho</h3>
-                        <p>Artroplastia de joelho para restauração articular em casos de desgastes e gonartrose, devolvendo a estabilidade do membro e a qualidade de vida.</p>
+                        <p>Reconstrução e alinhamento articular para joelhos desgastados por gonartrose, restaurando o alinhamento da perna e permitindo voltar às atividades normais.</p>
                         <ul class="spec-features">
-                            <li><i class="fa-solid fa-check"></i> Reabilitação acelerada pós-operatória</li>
-                            <li><i class="fa-solid fa-check"></i> Alívio eficaz de dores crônicas</li>
+                            <li><i class="fa-solid fa-check"></i> Reabilitação funcional precoce</li>
+                            <li><i class="fa-solid fa-check"></i> Recuperação da estabilidade</li>
                         </ul>
                     </div>
 
-                    <!-- Card 3 -->
-                    <div class="spec-card" data-category="trauma">
+                    <!-- Specialty 3 -->
+                    <div class="spec-card">
                         <div class="card-icon"><i class="fa-solid fa-bone"></i></div>
                         <h3>Cirurgia do Trauma e Ortopedia</h3>
-                        <p>Tratamento especializado para traumatologia ortopédica, acidentes de trabalho, fraturas complexas e publicação científica com trabalho sobre Fraturas de Planalto Tibial.</p>
+                        <p>Tratamento especializado em traumatologia ortopédica, acidentes de trabalho, fraturas de membros e autor de publicação científica sobre Fraturas de Planalto Tibial.</p>
                         <ul class="spec-features">
-                            <li><i class="fa-solid fa-check"></i> Tratamento de fraturas e contusões</li>
-                            <li><i class="fa-solid fa-check"></i> Fixação rígida e alinhamento anatômico</li>
+                            <li><i class="fa-solid fa-check"></i> Fixação cirúrgica de fraturas</li>
+                            <li><i class="fa-solid fa-check"></i> Atendimento emergencial e hospitalar</li>
                         </ul>
                     </div>
 
-                    <!-- Card 4 -->
-                    <div class="spec-card" data-category="infiltracoes">
-                        <div class="card-icon"><i class="fa-solid fa-stethoscope"></i></div>
+                    <!-- Specialty 4 -->
+                    <div class="spec-card">
+                        <div class="card-icon"><i class="fa-solid fa-syringe"></i></div>
                         <h3>Ortopedia Geral & Infiltrações</h3>
-                        <p>Avaliação minuciosa em consultório para dores agudas e crônicas. Procedimentos de infiltração guiada na coluna, quadril e joelho para alívio imediato.</p>
+                        <p>Avaliação detalhada para dores articulares e tratamento minimamente invasivo via infiltrações guiadas (viscossuplementação) no quadril, joelho e coluna.</p>
                         <ul class="spec-features">
-                            <li><i class="fa-solid fa-check"></i> Viscossuplementação articular</li>
-                            <li><i class="fa-solid fa-check"></i> Diagnóstico e plano individualizado</li>
+                            <li><i class="fa-solid fa-check"></i> Tratamento conservador de dores</li>
+                            <li><i class="fa-solid fa-check"></i> Procedimentos rápidos em consultório</li>
                         </ul>
                     </div>
 
                 </div>
 
-                <!-- Conditions List Grid with exact items requested -->
+                <!-- 13 Conditions Treated Interactive Grid -->
                 <div class="conditions-box">
-                    <h3><i class="fa-solid fa-notes-medical"></i> Lista Completa de Doenças Tratadas:</h3>
-                    <div class="conditions-tags">
-                        <span class="condition-tag"><i class="fa-solid fa-check"></i> Acidentes de trabalho</span>
-                        <span class="condition-tag"><i class="fa-solid fa-check"></i> Artropatias</span>
-                        <span class="condition-tag"><i class="fa-solid fa-check"></i> Artrose</span>
-                        <span class="condition-tag"><i class="fa-solid fa-check"></i> Bursite</span>
-                        <span class="condition-tag"><i class="fa-solid fa-check"></i> Contusões</span>
-                        <span class="condition-tag"><i class="fa-solid fa-check"></i> Doenças Ósseas</span>
-                        <span class="condition-tag"><i class="fa-solid fa-check"></i> Fraturas</span>
-                        <span class="condition-tag"><i class="fa-solid fa-check"></i> Artrose de quadril</span>
-                        <span class="condition-tag"><i class="fa-solid fa-check"></i> Bursite do quadril</span>
-                        <span class="condition-tag"><i class="fa-solid fa-check"></i> Dor facetária</span>
-                        <span class="condition-tag"><i class="fa-solid fa-check"></i> Dor crônica</span>
-                        <span class="condition-tag"><i class="fa-solid fa-check"></i> Ciatalgia</span>
-                        <span class="condition-tag"><i class="fa-solid fa-check"></i> Artroplastias</span>
+                    <div class="conditions-header text-center">
+                        <span class="section-tag">DIAGNÓSTICO & CUIDADO</span>
+                        <h3>Doenças e Condições Tratadas em Consultório</h3>
+                        <p>Confira a lista completa de patologias com acompanhamento médico individualizado:</p>
+                    </div>
+
+                    <div class="conditions-grid-modern">
+                        <div class="cond-card">
+                            <i class="fa-solid fa-briefcase-medical"></i>
+                            <span>Acidentes de trabalho</span>
+                        </div>
+                        <div class="cond-card">
+                            <i class="fa-solid fa-notes-medical"></i>
+                            <span>Artropatias</span>
+                        </div>
+                        <div class="cond-card">
+                            <i class="fa-solid fa-joint"></i>
+                            <span>Artrose</span>
+                        </div>
+                        <div class="cond-card">
+                            <i class="fa-solid fa-bandage"></i>
+                            <span>Bursite</span>
+                        </div>
+                        <div class="cond-card">
+                            <i class="fa-solid fa-user-injured"></i>
+                            <span>Contusões</span>
+                        </div>
+                        <div class="cond-card">
+                            <i class="fa-solid fa-bone"></i>
+                            <span>Doenças Ósseas</span>
+                        </div>
+                        <div class="cond-card">
+                            <i class="fa-solid fa-crutch"></i>
+                            <span>Fraturas</span>
+                        </div>
+                        <div class="cond-card">
+                            <i class="fa-solid fa-person-walk"></i>
+                            <span>Artrose de quadril</span>
+                        </div>
+                        <div class="cond-card">
+                            <i class="fa-solid fa-child-reaching"></i>
+                            <span>Bursite do quadril</span>
+                        </div>
+                        <div class="cond-card">
+                            <i class="fa-solid fa-bolt"></i>
+                            <span>Dor facetária</span>
+                        </div>
+                        <div class="cond-card">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                            <span>Dor crônica</span>
+                        </div>
+                        <div class="cond-card">
+                            <i class="fa-solid fa-wheelchair-move"></i>
+                            <span>Ciatalgia</span>
+                        </div>
+                        <div class="cond-card">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                            <span>Artroplastias</span>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </section>
 
@@ -341,10 +380,10 @@
                     
                     <!-- Pricing Table -->
                     <div class="pricing-col">
-                        <span class="section-tag">INVESTIMENTO EM SUA SAÚDE</span>
+                        <span class="section-tag">INVESTIMENTO & REEMBOLSO</span>
                         <h2 class="section-title">Valores das Consultas</h2>
                         <p class="paragraph">
-                            Transparência total nos custos com atendimento de excelência e tempo dedicado exclusivo para ouvir cada detalhe do seu histórico.
+                            Transparência total nos custos com atendimento de excelência, tempo dedicado para ouvir você e clareza de custos em todas as etapas.
                         </p>
 
                         <div class="price-cards-stack">
@@ -352,7 +391,7 @@
                                 <div class="price-badge">Mais Procurado</div>
                                 <div class="price-header">
                                     <h3>Consulta Presencial (São Roque)</h3>
-                                    <p>Atendimento completo na SR Clínica com exame físico detalhado e análise de exames.</p>
+                                    <p>Atendimento completo na SR Clínica em São Roque (SP) com exame físico minucioso e diagnóstico preciso.</p>
                                 </div>
                                 <div class="price-amount">
                                     <span class="currency">R$</span>
@@ -360,10 +399,10 @@
                                     <span class="period">/ consulta</span>
                                 </div>
                                 <ul class="price-list">
-                                    <li><i class="fa-solid fa-circle-check"></i> Consulta clínica de 45 a 60 minutos</li>
-                                    <li><i class="fa-solid fa-circle-check"></i> Avaliação minuciosa de raio-x e ressonâncias</li>
-                                    <li><i class="fa-solid fa-circle-check"></i> Orientação para cirurgia ou infiltração</li>
-                                    <li><i class="fa-solid fa-circle-check"></i> Emissão de laudo para reembolso do convênio</li>
+                                    <li><i class="fa-solid fa-circle-check"></i> Consulta dedicada de 45 a 60 minutos</li>
+                                    <li><i class="fa-solid fa-circle-check"></i> Avaliação detalhada de Raio-X e Ressonâncias</li>
+                                    <li><i class="fa-solid fa-circle-check"></i> Plano individualizado para dor, infiltração ou cirurgia</li>
+                                    <li><i class="fa-solid fa-circle-check"></i> Emissão de recibo/laudo para reembolso do convênio</li>
                                 </ul>
                             </div>
 
@@ -378,9 +417,9 @@
                                     <span class="period">/ consulta</span>
                                 </div>
                                 <ul class="price-list">
-                                    <li><i class="fa-solid fa-circle-check"></i> Vídeo chamada individualizada</li>
+                                    <li><i class="fa-solid fa-circle-check"></i> Vídeo chamada individualizada com o Dr. Rafael</li>
                                     <li><i class="fa-solid fa-circle-check"></i> Análise remota de exames digitais</li>
-                                    <li><i class="fa-solid fa-circle-check"></i> Receitas e pedidos de exame com código QR validado</li>
+                                    <li><i class="fa-solid fa-circle-check"></i> Receitas e pedidos com código QR validado nacionalmente</li>
                                 </ul>
                             </div>
                         </div>
@@ -393,14 +432,21 @@
                                 <p>Emitimos nota fiscal e laudo médico detalhado para que você solicite o <strong>reembolso integral ou parcial</strong> junto ao seu plano de saúde (Bradesco, SulAmérica, Amil, Porto Seguro, Unimed, etc.).</p>
                             </div>
                         </div>
+
+                        <div class="reviews-shortcut-box" style="margin-top: 24px; text-align: center;">
+                            <a href="#depoimentos" class="btn btn-outline btn-block">
+                                <i class="fa-solid fa-star" style="color: var(--accent-gold);"></i> Confira as Avaliações de Outros Pacientes
+                            </a>
+                        </div>
                     </div>
 
-                    <!-- Interactive Booking Form Widget -->
+                    <!-- Interactive Booking Form Widget (RIGHT SIDE) -->
                     <div class="booking-col" id="agendar">
                         <div class="booking-widget-box">
                             <div class="widget-header">
-                                <h3><i class="fa-regular fa-calendar-check"></i> Agendar sua Consulta</h3>
-                                <p>Selecione a opção desejada e envie a mensagem direto ao WhatsApp da equipe do Dr. Rafael.</p>
+                                <span class="badge-pill" style="margin-bottom: 8px;"><i class="fa-solid fa-location-arrow"></i> AGENDA DISPONÍVEL AO LADO DIREITO</span>
+                                <h3><i class="fa-regular fa-calendar-check"></i> Agenda Online de Agendamento</h3>
+                                <p>Preencha os dados abaixo para enviar a solicitação diretamente ao WhatsApp da equipe do Dr. Rafael Giorgeto.</p>
                             </div>
 
                             <form id="bookingForm" class="booking-form">

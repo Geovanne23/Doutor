@@ -908,38 +908,105 @@ ul {
     margin-top: 60px;
     background: #FFFFFF;
     border-radius: var(--radius-md);
-    padding: 36px;
+    padding: 40px;
     border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-md);
+}
+
+.conditions-header {
+    margin-bottom: 28px;
+}
+
+.conditions-header h3 {
+    font-size: 1.6rem;
+    color: var(--primary-dark);
+    margin-top: 6px;
+    margin-bottom: 8px;
+}
+
+.conditions-header p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.conditions-grid-modern {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 16px;
+}
+
+.cond-card {
+    background: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--primary-dark);
+    transition: var(--transition);
+}
+
+.cond-card:hover {
+    background: #FFFFFF;
+    border-color: var(--accent-teal);
+    transform: translateY(-3px);
     box-shadow: var(--shadow-sm);
 }
 
-.conditions-box h3 {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: var(--primary-dark);
-}
-
-.conditions-box h3 i {
+.cond-card i {
+    font-size: 1.25rem;
     color: var(--accent-teal);
+    flex-shrink: 0;
 }
 
-.conditions-tags {
+.agenda-callout-card {
+    background: linear-gradient(135deg, rgba(0, 173, 181, 0.08), rgba(30, 62, 98, 0.05));
+    border: 1px solid rgba(0, 173, 181, 0.25);
+    border-left: 5px solid var(--accent-teal);
+    border-radius: var(--radius-md);
+    padding: 22px 24px;
+    margin: 24px 0 28px 0;
+    box-shadow: var(--shadow-sm);
+}
+
+.agenda-callout-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 16px;
+}
+
+.agenda-callout-header i {
+    font-size: 1.6rem;
+    color: var(--accent-teal);
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.agenda-callout-header strong {
+    display: block;
+    font-size: 1.05rem;
+    color: var(--primary-dark);
+    margin-bottom: 2px;
+}
+
+.agenda-callout-header span {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+}
+
+.agenda-callout-actions {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 12px;
 }
 
-.condition-tag {
-    background-color: var(--bg-light);
-    color: var(--primary-blue);
-    font-weight: 600;
-    font-size: 0.88rem;
-    padding: 8px 16px;
-    border-radius: var(--radius-full);
-    border: 1px solid rgba(30, 62, 98, 0.12);
+.agenda-callout-actions .btn-sm {
+    padding: 10px 20px;
+    font-size: 0.85rem;
 }
 
 /* 9. PRICING & BOOKING SECTION */
