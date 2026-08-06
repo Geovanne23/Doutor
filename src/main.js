@@ -168,6 +168,41 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    /* 2.5 READ MORE EXPANDABLE BIO */
+    const btnReadMore = document.getElementById('btnReadMore');
+    const bioHiddenText = document.getElementById('bioHiddenText');
+    const readMoreText = document.getElementById('readMoreText');
+    const readMoreIcon = document.getElementById('readMoreIcon');
+
+    if (btnReadMore && bioHiddenText) {
+        btnReadMore.addEventListener('click', () => {
+            if (bioHiddenText.style.display === 'none' || bioHiddenText.style.display === '') {
+                bioHiddenText.style.display = 'block';
+                bioHiddenText.style.opacity = '0';
+                bioHiddenText.style.transform = 'translateY(-10px)';
+                
+                setTimeout(() => {
+                    bioHiddenText.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                    bioHiddenText.style.opacity = '1';
+                    bioHiddenText.style.transform = 'translateY(0)';
+                }, 20);
+
+                if (readMoreText) readMoreText.textContent = 'Mostrar Menos';
+                if (readMoreIcon) readMoreIcon.className = 'fa-solid fa-chevron-up';
+            } else {
+                bioHiddenText.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                bioHiddenText.style.opacity = '0';
+                bioHiddenText.style.transform = 'translateY(-10px)';
+
+                setTimeout(() => {
+                    bioHiddenText.style.display = 'none';
+                    if (readMoreText) readMoreText.textContent = 'Ler Mais Sobre o Doutor';
+                    if (readMoreIcon) readMoreIcon.className = 'fa-solid fa-chevron-down';
+                }, 300);
+            }
+        });
+    }
+
     /* 3. INTERACTIVE BOOKING WIDGET FORM */
     const bookingForm = document.getElementById('bookingForm');
 
