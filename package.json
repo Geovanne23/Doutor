@@ -1,0 +1,13 @@
+{
+  "name": "dr-rafael-giorgeto-web",
+  "version": "2.0.0",
+  "description": "Website Oficial de Ortopedia e Traumatologia - Dr. Rafael Giorgeto",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve -l 3000 .",
+    "start": "npx serve -l 3000 ."
+  },
+  "keywords": ["ortopedia", "traumatologia", "protese-quadril", "protese-joelho", "sao-roque"],
+  "author": "Dr. Rafael Giorgeto",
+  "license": "MIT"
+}
