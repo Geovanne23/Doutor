@@ -73,159 +73,98 @@
     <!-- Main Content -->
     <main>
 
-        <!-- Hero Section -->
-        <section id="home" class="hero-section">
+        <!-- Unified Hero & Profile Section (Sobre o Médico + Agenda no Lado Direito) -->
+        <section id="home" class="hero-section hero-profile-combined">
             <div class="hero-bg-shapes">
                 <div class="shape shape-1"></div>
                 <div class="shape shape-2"></div>
             </div>
-            <div class="container hero-container">
-                <div class="hero-content">
+            <div class="container hero-profile-grid">
+                
+                <!-- Left Column: Biografia do Médico, Formação e Detalhes -->
+                <div class="hero-profile-content" id="sobre">
                     <div class="badge-pill">
                         <span class="badge-dot"></span> CRM SP 226005 | RQE Nº 137898
                     </div>
-                    <h1 class="hero-title">
-                        Devolva sua <span class="highlight">mobilidade</span> e qualidade de vida sem dor.
-                    </h1>
-                    <p class="hero-subtitle">
-                        Atendimento ortopédico humanizado e cirurgias de alta precisão em São Roque e nos melhores hospitais de São Paulo. Tratamento personalizado para dores articulares, prótese de quadril e joelho.
-                    </p>
                     
-                    <div class="hero-buttons">
-                        <a href="https://wa.me/5511940653734?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Rafael%20Giorgeto." target="_blank" class="btn btn-whatsapp btn-lg">
-                            <i class="fa-brands fa-whatsapp"></i> Agendar pelo WhatsApp
-                        </a>
-                        <a href="#especialidades" class="btn btn-outline btn-lg">
-                            <i class="fa-solid fa-stethoscope"></i> Conhecer Tratamentos
-                        </a>
-                    </div>
-
-                    <div class="hero-trust">
-                        <div class="trust-item">
-                            <div class="trust-stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <span class="trust-text"><strong>5.0/5</strong> Nota Máxima (Doctoralia)</span>
-                        </div>
-                        <div class="trust-divider"></div>
-                        <div class="trust-item">
-                            <i class="fa-solid fa-hospital-user trust-icon"></i>
-                            <span class="trust-text">Cirurgias nos Melhores Hospitais</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="hero-image-wrapper">
-                    <div class="doctor-card-hero">
-                        <div class="hero-glow-disk"></div>
-                        <div class="image-frame">
-                            <img src="./public/assets/images/avatar.jpg" alt="Dr. Rafael Henrique Fernandes Giorgeto - Ortopedista" class="hero-doctor-img">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Hospital Credentials Banner -->
-        <section id="hospitais" class="hospitais-section">
-            <div class="container">
-                <p class="hospitais-label">ESTRUTURA CIRÚRGICA DE ALTA COMPLEXIDADE NOS PRINCIPAIS HOSPITAIS</p>
-                <div class="hospitais-grid">
-                    <div class="hospital-card">
-                        <i class="fa-solid fa-hospital"></i>
-                        <span>Hospital São Luiz</span>
-                        <small>Alphaville & Guarulhos</small>
-                    </div>
-                    <div class="hospital-card">
-                        <i class="fa-solid fa-hospital-symbol"></i>
-                        <span>Hospital Lefort</span>
-                        <small>Liberdade (São Paulo)</small>
-                    </div>
-                    <div class="hospital-card">
-                        <i class="fa-solid fa-house-medical"></i>
-                        <span>Hospital Evangélico</span>
-                        <small>Sorocaba</small>
-                    </div>
-                    <div class="hospital-card">
-                        <i class="fa-solid fa-clinic-medical"></i>
-                        <span>Hospital São Francisco</span>
-                        <small>São Roque & Osasco</small>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Profile & Agendamento Section (Bio on left, Agenda widget on right) -->
-        <section id="sobre" class="sobre-section">
-            <div class="container sobre-container-grid">
-                
-                <!-- Left Column: Informações sobre mim & Credenciais -->
-                <div class="sobre-text-col">
                     <span class="section-tag">INFORMAÇÕES SOBRE MIM</span>
-                    <h2 class="section-title">Dr. Rafael Henrique Fernandes Giorgeto</h2>
-                    
-                    <p class="paragraph-lead">
-                        Olá! Sou o <strong>Dr. Rafael Henrique Fernandes Giorgeto</strong>, ortopedista e traumatologista. Atendo em consultório particular em São Roque (SP) com foco em devolver sua mobilidade e qualidade de vida, unindo acolhimento, precisão diagnóstica e segurança em cada etapa.
-                    </p>
-                    <p class="paragraph">
-                        Na consulta detalhada, analiso minuciosamente seu caso para oferecer tratamento individualizado para dor, artrose, artroplastias, infiltrações de coluna, quadril e joelho, prótese de quadril e joelho e trauma ortopédico. Eu e minha equipe estamos prontos para te acompanhar com ética, evidência científica e clareza de custos.
-                    </p>
-                    <p class="paragraph">
-                        Atendo nos hospitais <strong>São Francisco</strong> (São Roque e Osasco), <strong>São Luiz</strong> (Guarulhos e Alphaville) e <strong>Lefort Liberdade</strong> (São Paulo), e realizo minhas cirurgias nesses hospitais e também no <strong>Hospital Evangélico de Sorocaba</strong>—estrutura de confiança para quem busca cuidado especializado.
+                    <h1 class="hero-title-name">
+                        Dr. Rafael Henrique Fernandes Giorgeto
+                    </h1>
+                    <p class="hero-tagline">
+                        Ortopedista e Traumatologista • Especialista em Próteses de Quadril e Joelho
                     </p>
 
-                    <div class="agenda-notice-pill">
-                        <i class="fa-solid fa-calendar-check"></i>
-                        <div>
-                            <strong>Agendamento & Avaliações:</strong><br>
-                            Agende uma consulta utilizando a <strong>agenda disponível ao lado direito da página</strong> e confira as avaliações de outros pacientes. Para mais informações, entre em contato.
+                    <div class="bio-text-wrapper">
+                        <p class="paragraph-lead">
+                            Olá! Sou o <strong>Dr. Rafael Henrique Fernandes Giorgeto</strong>, ortopedista e traumatologista. Atendo em consultório particular em São Roque (SP) com foco em devolver sua mobilidade e qualidade de vida, unindo acolhimento, precisão diagnóstica e segurança em cada etapa.
+                        </p>
+                        <p class="paragraph">
+                            Na consulta detalhada, analiso minuciosamente seu caso para oferecer tratamento individualizado para dor, artrose, artroplastias, infiltrações de coluna, quadril e joelho, prótese de quadril e joelho e trauma ortopédico. Eu e minha equipe estamos prontos para te acompanhar com ética, evidência científica e clareza de custos.
+                        </p>
+                        <p class="paragraph">
+                            Atendo nos hospitais <strong>São Francisco</strong> (São Roque e Osasco), <strong>São Luiz</strong> (Guarulhos e Alphaville) e <strong>Lefort Liberdade</strong> (São Paulo), e realizo minhas cirurgias nesses hospitais e também no <strong>Hospital Evangélico de Sorocaba</strong>—estrutura de confiança para quem busca cuidado especializado.
+                        </p>
+
+                        <div class="agenda-quote-box">
+                            <i class="fa-solid fa-circle-info"></i>
+                            <span>Agende uma consulta utilizando a <strong>agenda disponível ao lado direito da página</strong> e confira as avaliações de outros pacientes. Para mais informações, entre em contato.</span>
                         </div>
                     </div>
 
-                    <!-- Credenciais Grid -->
-                    <div class="credentials-grid">
-                        <div class="credential-item">
-                            <i class="fa-solid fa-id-card"></i>
-                            <div>
-                                <h4>Número de Registro</h4>
-                                <p><strong>CRM SP:</strong> 226005 | <strong>RQE Nº:</strong> 137898</p>
-                            </div>
-                        </div>
-                        <div class="credential-item">
+                    <!-- Credenciais Grid Integrado -->
+                    <div class="hero-credentials-grid">
+                        <div class="cred-chip">
                             <i class="fa-solid fa-graduation-cap"></i>
                             <div>
-                                <h4>Formação Acadêmica</h4>
-                                <p>Faculdade de Medicina de Catanduva<br>Residência no Conjunto Hospitalar do Mandaqui</p>
+                                <strong>Formação Acadêmica:</strong>
+                                <span>Faculdade de Medicina de Catanduva | Conjunto Hospitalar do Mandaqui</span>
                             </div>
                         </div>
-                        <div class="credential-item">
-                            <i class="fa-solid fa-language"></i>
-                            <div>
-                                <h4>Idiomas de Atendimento</h4>
-                                <p>Português e Inglês</p>
-                            </div>
-                        </div>
-                        <div class="credential-item">
+                        <div class="cred-chip">
                             <i class="fa-solid fa-book-bookmark"></i>
                             <div>
-                                <h4>Publicação Científica</h4>
-                                <p>Trabalho Sobre Fraturas de Planalto Tibial</p>
+                                <strong>Publicação Científica:</strong>
+                                <span>Trabalho Sobre Fraturas de Planalto tibial</span>
+                            </div>
+                        </div>
+                        <div class="cred-chip">
+                            <i class="fa-solid fa-language"></i>
+                            <div>
+                                <strong>Idiomas de Atendimento:</strong>
+                                <span>Português e Inglês</span>
+                            </div>
+                        </div>
+                        <div class="cred-chip">
+                            <i class="fa-solid fa-star" style="color: var(--accent-gold);"></i>
+                            <div>
+                                <strong>Avaliações:</strong>
+                                <span>5.0/5 Nota Máxima (Doctoralia)</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Right Column: A AGENDA DISPONÍVEL AO LADO DIREITO DA PÁGINA -->
-                <div class="booking-sidebar-col" id="agendar">
-                    <div class="booking-widget-box sticky-widget">
+                <!-- Right Column: Foto do Médico + Agenda de Agendamento Online no Lado Direito -->
+                <div class="hero-sidebar-col" id="agendar">
+                    
+                    <!-- Doctor Header Card -->
+                    <div class="doctor-profile-card">
+                        <div class="doctor-avatar-circle">
+                            <img src="./public/assets/images/avatar.jpg" alt="Dr. Rafael Henrique Fernandes Giorgeto">
+                        </div>
+                        <div class="doctor-card-info">
+                            <h3>Dr. Rafael Giorgeto</h3>
+                            <span class="status-online"><span class="status-dot"></span> Atendimento em São Roque & SP</span>
+                        </div>
+                    </div>
+
+                    <!-- Agenda Online Widget -->
+                    <div class="booking-widget-box hero-booking-widget">
                         <div class="widget-header text-center">
                             <span class="badge-pill-right"><i class="fa-regular fa-calendar-check"></i> AGENDA DISPONÍVEL AO LADO DIREITO</span>
                             <h3>Agendar sua Consulta</h3>
-                            <p>Selecione a opção desejada e envie sua solicitação direto para o WhatsApp do Dr. Rafael.</p>
+                            <p>Selecione a opção desejada e envie sua solicitação direto ao WhatsApp do médico.</p>
                         </div>
 
                         <form id="bookingForm" class="booking-form">
@@ -249,6 +188,35 @@
                                 <label for="patientPhone"><i class="fa-solid fa-phone"></i> Seu Telefone / WhatsApp</label>
                                 <input type="tel" id="patientPhone" class="form-control" placeholder="(11) 99999-9999" required>
                             </div>
+
+                            <div class="form-group">
+                                <label for="preferredTime"><i class="fa-solid fa-clock"></i> Preferência de Horário</label>
+                                <select id="preferredTime" class="form-control">
+                                    <option value="Período da Manhã">Manhã</option>
+                                    <option value="Período da Tarde">Tarde</option>
+                                    <option value="Primeiro Horário Disponível">Primeiro horário disponível</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="patientNotes"><i class="fa-solid fa-message"></i> Qual a sua principal dor ou motivo?</label>
+                                <textarea id="patientNotes" class="form-control" rows="2" placeholder="Ex: Dor no quadril ao caminhar, artrose no joelho, fratura, etc."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-whatsapp btn-block btn-lg">
+                                <i class="fa-brands fa-whatsapp"></i> Confirmar Agendamento no WhatsApp
+                            </button>
+                        </form>
+
+                        <div class="widget-footer-info text-center">
+                            <p><i class="fa-solid fa-file-invoice-dollar"></i> Recibo/Laudo para <strong>reembolso de convênios</strong> (Bradesco, SulAmérica, Amil, Porto Seguro, Unimed, etc.).</p>
+                            <a href="#depoimentos" class="link-reviews"><i class="fa-solid fa-star"></i> Confira as avaliações de outros pacientes</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
 
                             <div class="form-group">
                                 <label for="preferredTime"><i class="fa-solid fa-clock"></i> Preferência de Horário</label>

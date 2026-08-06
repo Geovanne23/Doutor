@@ -380,12 +380,161 @@ ul {
     padding: 4px;
 }
 
-/* 5. HERO SECTION */
+/* 5. HERO & PROFILE COMBINED SECTION */
 .hero-section {
     position: relative;
-    padding: 160px 0 100px 0;
+    padding: 130px 0 80px 0;
     background: radial-gradient(circle at 80% 20%, rgba(0, 173, 181, 0.08) 0%, rgba(248, 250, 252, 1) 70%);
     overflow: hidden;
+}
+
+.hero-profile-combined {
+    padding-top: 120px;
+}
+
+.hero-profile-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 48px;
+    align-items: start;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-title-name {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--primary-dark);
+    line-height: 1.2;
+    margin-bottom: 6px;
+}
+
+.hero-tagline {
+    font-size: 1.05rem;
+    color: var(--accent-teal);
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.bio-text-wrapper .paragraph-lead {
+    font-size: 1.1rem;
+    color: var(--primary-dark);
+    margin-bottom: 14px;
+    line-height: 1.65;
+}
+
+.bio-text-wrapper .paragraph {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+    line-height: 1.65;
+}
+
+.agenda-quote-box {
+    background: linear-gradient(135deg, rgba(0, 173, 181, 0.1), rgba(30, 62, 98, 0.05));
+    border-left: 4px solid var(--accent-teal);
+    border-radius: var(--radius-sm);
+    padding: 14px 18px;
+    margin: 20px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.9rem;
+    color: var(--primary-dark);
+}
+
+.agenda-quote-box i {
+    font-size: 1.25rem;
+    color: var(--accent-teal);
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.hero-credentials-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin: 24px 0 28px 0;
+}
+
+.cred-chip {
+    background: #FFFFFF;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 12px 14px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.82rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.cred-chip i {
+    font-size: 1.2rem;
+    color: var(--accent-teal);
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.cred-chip strong {
+    display: block;
+    color: var(--primary-dark);
+    font-size: 0.85rem;
+    margin-bottom: 2px;
+}
+
+.cred-chip span {
+    color: var(--text-muted);
+    line-height: 1.3;
+}
+
+.doctor-profile-card {
+    background: #FFFFFF;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow-sm);
+}
+
+.doctor-avatar-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--accent-teal);
+    flex-shrink: 0;
+}
+
+.doctor-avatar-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.doctor-card-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 2px;
+}
+
+.status-online {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.78rem;
+    color: var(--whatsapp-green);
+    font-weight: 600;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--whatsapp-green);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--whatsapp-green);
 }
 
 .hero-bg-shapes .shape {
@@ -1777,7 +1926,7 @@ ul {
         right: 0;
     }
 
-    .sobre-container, .sobre-container-grid {
+    .sobre-container, .sobre-container-grid, .hero-profile-grid {
         grid-template-columns: 1fr;
     }
 
