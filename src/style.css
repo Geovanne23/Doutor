@@ -214,6 +214,27 @@ ul {
     margin-bottom: 20px;
 }
 
+.paragraph-highlight {
+    background: linear-gradient(135deg, rgba(0, 173, 181, 0.08), rgba(30, 62, 98, 0.05));
+    border-left: 4px solid var(--accent-teal);
+    padding: 16px 20px;
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    font-size: 0.95rem;
+    color: var(--primary-dark);
+    margin: 20px 0 28px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    line-height: 1.6;
+}
+
+.paragraph-highlight i {
+    font-size: 1.35rem;
+    color: var(--accent-teal);
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
 /* 4. NAVBAR */
 .navbar {
     position: fixed;
@@ -772,6 +793,10 @@ ul {
 .credential-item p {
     font-size: 0.85rem;
     color: var(--text-muted);
+}
+
+.credential-full {
+    grid-column: 1 / -1;
 }
 
 .sobre-cta {
