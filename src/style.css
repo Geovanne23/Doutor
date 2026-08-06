@@ -1090,31 +1090,80 @@ ul {
     color: var(--accent-teal);
 }
 
-.reembolso-card {
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
-    background: rgba(212, 175, 55, 0.08);
-    border: 1px solid rgba(212, 175, 55, 0.3);
-    padding: 24px;
+.precos-lista-box {
+    margin-top: 28px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
+    padding: 26px 28px;
+    box-shadow: var(--shadow-sm);
 }
 
-.reembolso-card i {
-    font-size: 1.8rem;
-    color: var(--accent-gold);
-    margin-top: 2px;
+.precos-lista-title {
+    font-size: 1.2rem;
+    color: var(--primary-dark);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 12px;
 }
 
-.reembolso-card h4 {
-    font-size: 1rem;
-    margin-bottom: 4px;
+.precos-lista-title i {
+    color: var(--accent-teal);
 }
 
-.reembolso-card p {
-    font-size: 0.85rem;
-    color: var(--text-muted);
+.precos-table-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
 
+.preco-item-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 18px;
+    background-color: var(--bg-light);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.preco-item-row:hover {
+    border-color: var(--accent-teal);
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 12px rgba(0, 173, 181, 0.12);
+    transform: translateX(4px);
+}
+
+.preco-item-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+
+.preco-item-info i {
+    color: var(--accent-teal);
+    font-size: 1.1rem;
+}
+
+.preco-item-value {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 1.05rem;
+    color: var(--accent-teal);
+    background: rgba(0, 173, 181, 0.12);
+    border: 1px solid rgba(0, 173, 181, 0.25);
+    padding: 6px 16px;
+    border-radius: var(--radius-full);
+    white-space: nowrap;
 }
 
 /* BOOKING WIDGET FORM */
