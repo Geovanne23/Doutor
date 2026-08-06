@@ -159,23 +159,15 @@
             </div>
         </section>
 
-        <!-- About Section -->
+        <!-- Profile & Agendamento Section (Bio on left, Agenda widget on right) -->
         <section id="sobre" class="sobre-section">
-            <div class="container sobre-container">
-                <div class="sobre-image-col">
-                    <div class="image-stack">
-                        <img src="./public/assets/images/avatar.jpg" alt="Dr. Rafael Henrique Fernandes Giorgeto" class="stack-img main-img">
-                        <img src="./public/assets/images/photo_4.jpg" alt="Atendimento e Procedimentos Ortopédicos" class="stack-img sub-img">
-                        <div class="experience-card">
-                            <span class="exp-number">100%</span>
-                            <span class="exp-text">Ética, Evidência Científica e Clareza de Custos</span>
-                        </div>
-                    </div>
-                </div>
-
+            <div class="container sobre-container-grid">
+                
+                <!-- Left Column: Informações sobre mim & Credenciais -->
                 <div class="sobre-text-col">
                     <span class="section-tag">INFORMAÇÕES SOBRE MIM</span>
                     <h2 class="section-title">Dr. Rafael Henrique Fernandes Giorgeto</h2>
+                    
                     <p class="paragraph-lead">
                         Olá! Sou o <strong>Dr. Rafael Henrique Fernandes Giorgeto</strong>, ortopedista e traumatologista. Atendo em consultório particular em São Roque (SP) com foco em devolver sua mobilidade e qualidade de vida, unindo acolhimento, precisão diagnóstica e segurança em cada etapa.
                     </p>
@@ -186,25 +178,15 @@
                         Atendo nos hospitais <strong>São Francisco</strong> (São Roque e Osasco), <strong>São Luiz</strong> (Guarulhos e Alphaville) e <strong>Lefort Liberdade</strong> (São Paulo), e realizo minhas cirurgias nesses hospitais e também no <strong>Hospital Evangélico de Sorocaba</strong>—estrutura de confiança para quem busca cuidado especializado.
                     </p>
 
-                    <!-- Agenda Callout Box -->
-                    <div class="agenda-callout-card">
-                        <div class="agenda-callout-header">
-                            <i class="fa-solid fa-calendar-check"></i>
-                            <div>
-                                <strong>Agenda Disponível ao Lado Direito da Página</strong>
-                                <span>Agende sua consulta rápida ou confira as avaliações de outros pacientes.</span>
-                            </div>
-                        </div>
-                        <div class="agenda-callout-actions">
-                            <a href="#agendar" class="btn btn-whatsapp btn-sm">
-                                <i class="fa-solid fa-calendar-days"></i> Ir para a Agenda
-                            </a>
-                            <a href="#depoimentos" class="btn btn-outline btn-sm">
-                                <i class="fa-solid fa-star"></i> Ver Avaliações
-                            </a>
+                    <div class="agenda-notice-pill">
+                        <i class="fa-solid fa-calendar-check"></i>
+                        <div>
+                            <strong>Agendamento & Avaliações:</strong><br>
+                            Agende uma consulta utilizando a <strong>agenda disponível ao lado direito da página</strong> e confira as avaliações de outros pacientes. Para mais informações, entre em contato.
                         </div>
                     </div>
 
+                    <!-- Credenciais Grid -->
                     <div class="credentials-grid">
                         <div class="credential-item">
                             <i class="fa-solid fa-id-card"></i>
@@ -234,15 +216,66 @@
                                 <p>Trabalho Sobre Fraturas de Planalto Tibial</p>
                             </div>
                         </div>
-                        <div class="credential-item credential-full">
-                            <i class="fa-solid fa-award"></i>
-                            <div>
-                                <h4>Especialidades Registradas</h4>
-                                <p>Prótese de Quadril • Prótese do Joelho • Cirurgia do Trauma e Ortopedia • Ortopedia Geral</p>
+                    </div>
+                </div>
+
+                <!-- Right Column: A AGENDA DISPONÍVEL AO LADO DIREITO DA PÁGINA -->
+                <div class="booking-sidebar-col" id="agendar">
+                    <div class="booking-widget-box sticky-widget">
+                        <div class="widget-header text-center">
+                            <span class="badge-pill-right"><i class="fa-regular fa-calendar-check"></i> AGENDA DISPONÍVEL AO LADO DIREITO</span>
+                            <h3>Agendar sua Consulta</h3>
+                            <p>Selecione a opção desejada e envie sua solicitação direto para o WhatsApp do Dr. Rafael.</p>
+                        </div>
+
+                        <form id="bookingForm" class="booking-form">
+                            <div class="form-group">
+                                <label for="consultType"><i class="fa-solid fa-stethoscope"></i> Tipo de Atendimento</label>
+                                <select id="consultType" class="form-control" required>
+                                    <option value="Primeira Consulta Presencial (São Roque) - R$350">Consulta Presencial (São Roque - R$ 350)</option>
+                                    <option value="Teleconsulta Online - R$250">Teleconsulta Online / Telemedicina (R$ 250)</option>
+                                    <option value="Avaliação para Prótese de Quadril / Joelho">Avaliação Cirúrgica (Prótese de Quadril / Joelho)</option>
+                                    <option value="Infiltração de Articulação / Joelho / Coluna">Procedimento de Infiltração Guiada</option>
+                                    <option value="Retorno de Consulta">Retorno de Consulta</option>
+                                </select>
                             </div>
+
+                            <div class="form-group">
+                                <label for="patientName"><i class="fa-solid fa-user"></i> Nome Completo do Paciente</label>
+                                <input type="text" id="patientName" class="form-control" placeholder="Digite seu nome completo" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="patientPhone"><i class="fa-solid fa-phone"></i> Seu Telefone / WhatsApp</label>
+                                <input type="tel" id="patientPhone" class="form-control" placeholder="(11) 99999-9999" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="preferredTime"><i class="fa-solid fa-clock"></i> Preferência de Horário</label>
+                                <select id="preferredTime" class="form-control">
+                                    <option value="Período da Manhã">Manhã</option>
+                                    <option value="Período da Tarde">Tarde</option>
+                                    <option value="Primeiro Horário Disponível">Primeiro horário disponível</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="patientNotes"><i class="fa-solid fa-message"></i> Qual a sua principal dor ou motivo?</label>
+                                <textarea id="patientNotes" class="form-control" rows="3" placeholder="Ex: Dor no quadril ao caminhar, artrose no joelho, fratura, etc."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-whatsapp btn-block btn-lg">
+                                <i class="fa-brands fa-whatsapp"></i> Confirmar Agendamento no WhatsApp
+                            </button>
+                        </form>
+
+                        <div class="widget-footer-info text-center">
+                            <p><i class="fa-solid fa-file-invoice-dollar"></i> Recibo/Laudo para <strong>reembolso de convênios</strong> (Bradesco, SulAmérica, Amil, Porto Seguro, Unimed, etc.).</p>
+                            <a href="#depoimentos" class="link-reviews"><i class="fa-solid fa-star"></i> Confira as avaliações de outros pacientes</a>
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
 
@@ -373,125 +406,62 @@
             </div>
         </section>
 
-        <!-- Pricing & Appointment Widget Section -->
+        <!-- Pricing & Refund Information Section -->
         <section id="precos" class="precos-section">
             <div class="container">
-                <div class="pricing-grid-wrapper">
-                    
-                    <!-- Pricing Table -->
-                    <div class="pricing-col">
-                        <span class="section-tag">INVESTIMENTO & REEMBOLSO</span>
-                        <h2 class="section-title">Valores das Consultas</h2>
-                        <p class="paragraph">
-                            Transparência total nos custos com atendimento de excelência, tempo dedicado para ouvir você e clareza de custos em todas as etapas.
-                        </p>
+                <div class="section-header text-center">
+                    <span class="section-tag">INVESTIMENTO & REEMBOLSO</span>
+                    <h2 class="section-title">Valores das Consultas e Atendimento</h2>
+                    <p class="section-description">
+                        Transparência total nos custos com atendimento de excelência e clareza em todas as etapas.
+                    </p>
+                </div>
 
-                        <div class="price-cards-stack">
-                            <div class="price-card popular">
-                                <div class="price-badge">Mais Procurado</div>
-                                <div class="price-header">
-                                    <h3>Consulta Presencial (São Roque)</h3>
-                                    <p>Atendimento completo na SR Clínica em São Roque (SP) com exame físico minucioso e diagnóstico preciso.</p>
-                                </div>
-                                <div class="price-amount">
-                                    <span class="currency">R$</span>
-                                    <span class="number">350</span>
-                                    <span class="period">/ consulta</span>
-                                </div>
-                                <ul class="price-list">
-                                    <li><i class="fa-solid fa-circle-check"></i> Consulta dedicada de 45 a 60 minutos</li>
-                                    <li><i class="fa-solid fa-circle-check"></i> Avaliação detalhada de Raio-X e Ressonâncias</li>
-                                    <li><i class="fa-solid fa-circle-check"></i> Plano individualizado para dor, infiltração ou cirurgia</li>
-                                    <li><i class="fa-solid fa-circle-check"></i> Emissão de recibo/laudo para reembolso do convênio</li>
-                                </ul>
-                            </div>
-
-                            <div class="price-card">
-                                <div class="price-header">
-                                    <h3>Teleconsulta / Telemedicina</h3>
-                                    <p>Atendimento online de qualquer lugar do Brasil com laudo e receita digital com assinatura ICP-Brasil.</p>
-                                </div>
-                                <div class="price-amount">
-                                    <span class="currency">R$</span>
-                                    <span class="number">250</span>
-                                    <span class="period">/ consulta</span>
-                                </div>
-                                <ul class="price-list">
-                                    <li><i class="fa-solid fa-circle-check"></i> Vídeo chamada individualizada com o Dr. Rafael</li>
-                                    <li><i class="fa-solid fa-circle-check"></i> Análise remota de exames digitais</li>
-                                    <li><i class="fa-solid fa-circle-check"></i> Receitas e pedidos com código QR validado nacionalmente</li>
-                                </ul>
-                            </div>
+                <div class="price-cards-stack-grid">
+                    <div class="price-card popular">
+                        <div class="price-badge">Mais Procurado</div>
+                        <div class="price-header">
+                            <h3>Consulta Presencial (São Roque)</h3>
+                            <p>Atendimento completo na SR Clínica em São Roque (SP) com exame físico minucioso e diagnóstico preciso.</p>
                         </div>
-
-                        <!-- Convênio / Reembolso notice -->
-                        <div class="reembolso-card">
-                            <i class="fa-solid fa-file-invoice-dollar info-icon"></i>
-                            <div>
-                                <h4>Atendimento Particular com Reembolso de Convênio</h4>
-                                <p>Emitimos nota fiscal e laudo médico detalhado para que você solicite o <strong>reembolso integral ou parcial</strong> junto ao seu plano de saúde (Bradesco, SulAmérica, Amil, Porto Seguro, Unimed, etc.).</p>
-                            </div>
+                        <div class="price-amount">
+                            <span class="currency">R$</span>
+                            <span class="number">350</span>
+                            <span class="period">/ consulta</span>
                         </div>
-
-                        <div class="reviews-shortcut-box" style="margin-top: 24px; text-align: center;">
-                            <a href="#depoimentos" class="btn btn-outline btn-block">
-                                <i class="fa-solid fa-star" style="color: var(--accent-gold);"></i> Confira as Avaliações de Outros Pacientes
-                            </a>
-                        </div>
+                        <ul class="price-list">
+                            <li><i class="fa-solid fa-circle-check"></i> Consulta dedicada de 45 a 60 minutos</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Avaliação detalhada de Raio-X e Ressonâncias</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Plano individualizado para dor, infiltração ou cirurgia</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Emissão de recibo/laudo para reembolso do convênio</li>
+                        </ul>
                     </div>
 
-                    <!-- Interactive Booking Form Widget (RIGHT SIDE) -->
-                    <div class="booking-col" id="agendar">
-                        <div class="booking-widget-box">
-                            <div class="widget-header">
-                                <span class="badge-pill" style="margin-bottom: 8px;"><i class="fa-solid fa-location-arrow"></i> AGENDA DISPONÍVEL AO LADO DIREITO</span>
-                                <h3><i class="fa-regular fa-calendar-check"></i> Agenda Online de Agendamento</h3>
-                                <p>Preencha os dados abaixo para enviar a solicitação diretamente ao WhatsApp da equipe do Dr. Rafael Giorgeto.</p>
-                            </div>
-
-                            <form id="bookingForm" class="booking-form">
-                                <div class="form-group">
-                                    <label for="consultType"><i class="fa-solid fa-stethoscope"></i> Tipo de Atendimento</label>
-                                    <select id="consultType" class="form-control" required>
-                                        <option value="Primeira Consulta Presencial (São Roque) - R$350">Primeira Consulta Presencial (São Roque - R$ 350)</option>
-                                        <option value="Teleconsulta Online - R$250">Teleconsulta Online / Telemedicina (R$ 250)</option>
-                                        <option value="Avaliação para Prótese de Quadril / Joelho">Avaliação Cirúrgica (Prótese de Quadril / Joelho)</option>
-                                        <option value="Infiltração de Articulação / Joelho / Coluna">Procedimento de Infiltração Guiada</option>
-                                        <option value="Retorno de Consulta">Retorno de Consulta</option>
-                                    </select>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="patientName"><i class="fa-solid fa-user"></i> Nome Completo do Paciente</label>
-                                    <input type="text" id="patientName" class="form-control" placeholder="Digite seu nome completo" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="patientPhone"><i class="fa-solid fa-phone"></i> Seu Telefone / WhatsApp</label>
-                                    <input type="tel" id="patientPhone" class="form-control" placeholder="(11) 99999-9999" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="preferredTime"><i class="fa-solid fa-clock"></i> Preferência de Horário</label>
-                                    <select id="preferredTime" class="form-control">
-                                        <option value="Período da Manhã">Manhã</option>
-                                        <option value="Período da Tarde">Tarde</option>
-                                        <option value="Primeiro Horário Disponível">Primeiro horário disponível</option>
-                                    </select>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="patientNotes"><i class="fa-solid fa-message"></i> Qual a sua principal dor ou motivo?</label>
-                                    <textarea id="patientNotes" class="form-control" rows="3" placeholder="Ex: Dor no quadril ao caminhar, artrose no joelho, fratura, etc."></textarea>
-                                </div>
-
-                                <button type="submit" class="btn btn-whatsapp btn-block btn-lg">
-                                    <i class="fa-brands fa-whatsapp"></i> Confirmar Agendamento no WhatsApp
-                                </button>
-                            </form>
+                    <div class="price-card">
+                        <div class="price-header">
+                            <h3>Teleconsulta / Telemedicina</h3>
+                            <p>Atendimento online de qualquer lugar do Brasil com laudo e receita digital com assinatura ICP-Brasil.</p>
                         </div>
+                        <div class="price-amount">
+                            <span class="currency">R$</span>
+                            <span class="number">250</span>
+                            <span class="period">/ consulta</span>
+                        </div>
+                        <ul class="price-list">
+                            <li><i class="fa-solid fa-circle-check"></i> Vídeo chamada individualizada com o Dr. Rafael</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Análise remota de exames digitais</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Receitas e pedidos com código QR validado nacionalmente</li>
+                        </ul>
                     </div>
+                </div>
 
+                <!-- Convênio / Reembolso notice -->
+                <div class="reembolso-card" style="margin-top: 30px;">
+                    <i class="fa-solid fa-file-invoice-dollar info-icon"></i>
+                    <div>
+                        <h4>Atendimento Particular com Reembolso de Convênio Médico</h4>
+                        <p>Emitimos nota fiscal e laudo médico detalhado para que você solicite o <strong>reembolso integral ou parcial</strong> junto ao seu plano de saúde (Bradesco, SulAmérica, Amil, Porto Seguro, Unimed, etc.).</p>
+                    </div>
                 </div>
             </div>
         </section>
