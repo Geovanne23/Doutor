@@ -37,7 +37,9 @@
 }
 
 /* 2. RESET & BASE STYLES */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -56,7 +58,12 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--font-heading);
     color: var(--primary-dark);
     font-weight: 700;
@@ -214,27 +221,6 @@ ul {
     margin-bottom: 20px;
 }
 
-.paragraph-highlight {
-    background: linear-gradient(135deg, rgba(0, 173, 181, 0.08), rgba(30, 62, 98, 0.05));
-    border-left: 4px solid var(--accent-teal);
-    padding: 16px 20px;
-    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-    font-size: 0.95rem;
-    color: var(--primary-dark);
-    margin: 20px 0 28px 0;
-    display: flex;
-    align-items: flex-start;
-    gap: 14px;
-    line-height: 1.6;
-}
-
-.paragraph-highlight i {
-    font-size: 1.35rem;
-    color: var(--accent-teal);
-    margin-top: 2px;
-    flex-shrink: 0;
-}
-
 /* 4. NAVBAR */
 .navbar {
     position: fixed;
@@ -327,7 +313,8 @@ ul {
     white-space: nowrap;
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover,
+.nav-link.active {
     color: var(--primary-blue);
 }
 
@@ -342,7 +329,8 @@ ul {
     transition: var(--transition);
 }
 
-.nav-link:hover::after, .nav-link.active::after {
+.nav-link:hover::after,
+.nav-link.active::after {
     width: 100%;
 }
 
@@ -380,161 +368,12 @@ ul {
     padding: 4px;
 }
 
-/* 5. HERO & PROFILE COMBINED SECTION */
+/* 5. HERO SECTION */
 .hero-section {
     position: relative;
-    padding: 130px 0 80px 0;
+    padding: 160px 0 100px 0;
     background: radial-gradient(circle at 80% 20%, rgba(0, 173, 181, 0.08) 0%, rgba(248, 250, 252, 1) 70%);
     overflow: hidden;
-}
-
-.hero-profile-combined {
-    padding-top: 120px;
-}
-
-.hero-profile-grid {
-    display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
-    gap: 48px;
-    align-items: start;
-    position: relative;
-    z-index: 1;
-}
-
-.hero-title-name {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: var(--primary-dark);
-    line-height: 1.2;
-    margin-bottom: 6px;
-}
-
-.hero-tagline {
-    font-size: 1.05rem;
-    color: var(--accent-teal);
-    font-weight: 700;
-    margin-bottom: 24px;
-}
-
-.bio-text-wrapper .paragraph-lead {
-    font-size: 1.1rem;
-    color: var(--primary-dark);
-    margin-bottom: 14px;
-    line-height: 1.65;
-}
-
-.bio-text-wrapper .paragraph {
-    font-size: 0.95rem;
-    color: var(--text-muted);
-    margin-bottom: 14px;
-    line-height: 1.65;
-}
-
-.agenda-quote-box {
-    background: linear-gradient(135deg, rgba(0, 173, 181, 0.1), rgba(30, 62, 98, 0.05));
-    border-left: 4px solid var(--accent-teal);
-    border-radius: var(--radius-sm);
-    padding: 14px 18px;
-    margin: 20px 0;
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    font-size: 0.9rem;
-    color: var(--primary-dark);
-}
-
-.agenda-quote-box i {
-    font-size: 1.25rem;
-    color: var(--accent-teal);
-    margin-top: 2px;
-    flex-shrink: 0;
-}
-
-.hero-credentials-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
-    margin: 24px 0 28px 0;
-}
-
-.cred-chip {
-    background: #FFFFFF;
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-sm);
-    padding: 12px 14px;
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    font-size: 0.82rem;
-    box-shadow: var(--shadow-sm);
-}
-
-.cred-chip i {
-    font-size: 1.2rem;
-    color: var(--accent-teal);
-    margin-top: 2px;
-    flex-shrink: 0;
-}
-
-.cred-chip strong {
-    display: block;
-    color: var(--primary-dark);
-    font-size: 0.85rem;
-    margin-bottom: 2px;
-}
-
-.cred-chip span {
-    color: var(--text-muted);
-    line-height: 1.3;
-}
-
-.doctor-profile-card {
-    background: #FFFFFF;
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-md);
-    padding: 16px 20px;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 20px;
-    box-shadow: var(--shadow-sm);
-}
-
-.doctor-avatar-circle {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 3px solid var(--accent-teal);
-    flex-shrink: 0;
-}
-
-.doctor-avatar-circle img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.doctor-card-info h3 {
-    font-size: 1.1rem;
-    margin-bottom: 2px;
-}
-
-.status-online {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 0.78rem;
-    color: var(--whatsapp-green);
-    font-weight: 600;
-}
-
-.status-dot {
-    width: 8px;
-    height: 8px;
-    background-color: var(--whatsapp-green);
-    border-radius: 50%;
-    box-shadow: 0 0 8px var(--whatsapp-green);
 }
 
 .hero-bg-shapes .shape {
@@ -771,18 +610,39 @@ ul {
 }
 
 @keyframes floatBadgeTop {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-6px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
 }
 
 @keyframes floatBadgeMiddle {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
 }
 
 @keyframes floatBadgeBottom {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-5px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
 }
 
 /* 6. HOSPITAIS SECTION */
@@ -844,92 +704,71 @@ ul {
     margin-top: 2px;
 }
 
-/* 7. SOBRE & AGENDAMENTO INTEGRADO SECTION */
+/* 7. SOBRE SECTION */
 .sobre-section {
-    padding: 100px 0;
+    padding: 120px 0;
     background-color: var(--bg-card);
 }
 
-.sobre-container-grid {
+.sobre-container {
     display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
-    gap: 48px;
-    align-items: start;
-}
-
-.agenda-notice-pill {
-    background: linear-gradient(135deg, rgba(0, 173, 181, 0.08), rgba(30, 62, 98, 0.05));
-    border-left: 4px solid var(--accent-teal);
-    border-radius: var(--radius-sm);
-    padding: 16px 20px;
-    margin: 20px 0 28px 0;
-    display: flex;
-    align-items: flex-start;
-    gap: 14px;
-    font-size: 0.95rem;
-    color: var(--primary-dark);
-}
-
-.agenda-notice-pill i {
-    font-size: 1.35rem;
-    color: var(--accent-teal);
-    margin-top: 2px;
-    flex-shrink: 0;
-}
-
-.badge-pill-right {
-    display: inline-flex;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 60px;
     align-items: center;
-    gap: 6px;
-    background-color: rgba(0, 173, 181, 0.12);
-    color: var(--accent-teal);
-    border: 1px solid rgba(0, 173, 181, 0.3);
-    padding: 4px 12px;
-    border-radius: var(--radius-full);
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.5px;
 }
 
-.booking-sidebar-col {
+.image-stack {
     position: relative;
+    padding-bottom: 60px;
 }
 
-.sticky-widget {
-    position: sticky;
-    top: 100px;
+.stack-img {
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    object-fit: cover;
 }
 
-.widget-footer-info {
-    margin-top: 20px;
-    padding-top: 16px;
-    border-top: 1px solid var(--border-color);
-    font-size: 0.82rem;
-    color: var(--text-muted);
+.main-img {
+    width: 88%;
+    height: 440px;
+    border: 6px solid #FFFFFF;
 }
 
-.widget-footer-info i {
-    color: var(--accent-teal);
+.sub-img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 55%;
+    height: 260px;
+    border: 6px solid #FFFFFF;
 }
 
-.link-reviews {
-    display: inline-block;
-    margin-top: 8px;
-    color: var(--primary-blue);
-    font-weight: 600;
-    font-size: 0.85rem;
-    text-decoration: underline;
+.experience-card {
+    position: absolute;
+    top: 40px;
+    left: -20px;
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-dark));
+    color: #FFFFFF;
+    padding: 20px 24px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    display: flex;
+    flex-direction: column;
+    max-width: 180px;
 }
 
-.link-reviews:hover {
-    color: var(--accent-teal);
+.exp-number {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--accent-gold);
+    line-height: 1;
 }
 
-.price-cards-stack-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 24px;
-    margin-top: 36px;
+.exp-text {
+    font-size: 0.8rem;
+    line-height: 1.3;
+    margin-top: 6px;
 }
 
 .credentials-grid {
@@ -965,10 +804,6 @@ ul {
     color: var(--text-muted);
 }
 
-.credential-full {
-    grid-column: 1 / -1;
-}
-
 .sobre-cta {
     margin-top: 32px;
 }
@@ -1000,7 +835,8 @@ ul {
     transition: var(--transition);
 }
 
-.tab-btn:hover, .tab-btn.active {
+.tab-btn:hover,
+.tab-btn.active {
     background: linear-gradient(135deg, var(--primary-blue), var(--primary-dark));
     color: #FFFFFF;
     border-color: transparent;
@@ -1078,105 +914,38 @@ ul {
     margin-top: 60px;
     background: #FFFFFF;
     border-radius: var(--radius-md);
-    padding: 40px;
+    padding: 36px;
     border: 1px solid var(--border-color);
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-sm);
 }
 
-.conditions-header {
-    margin-bottom: 28px;
-}
-
-.conditions-header h3 {
-    font-size: 1.6rem;
-    color: var(--primary-dark);
-    margin-top: 6px;
-    margin-bottom: 8px;
-}
-
-.conditions-header p {
-    color: var(--text-muted);
-    font-size: 0.95rem;
-}
-
-.conditions-grid-modern {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-    gap: 16px;
-}
-
-.cond-card {
-    background: var(--bg-light);
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-sm);
-    padding: 16px 20px;
+.conditions-box h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
-    gap: 12px;
-    font-size: 0.92rem;
-    font-weight: 600;
+    gap: 10px;
     color: var(--primary-dark);
-    transition: var(--transition);
 }
 
-.cond-card:hover {
-    background: #FFFFFF;
-    border-color: var(--accent-teal);
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-sm);
-}
-
-.cond-card i {
-    font-size: 1.25rem;
+.conditions-box h3 i {
     color: var(--accent-teal);
-    flex-shrink: 0;
 }
 
-.agenda-callout-card {
-    background: linear-gradient(135deg, rgba(0, 173, 181, 0.08), rgba(30, 62, 98, 0.05));
-    border: 1px solid rgba(0, 173, 181, 0.25);
-    border-left: 5px solid var(--accent-teal);
-    border-radius: var(--radius-md);
-    padding: 22px 24px;
-    margin: 24px 0 28px 0;
-    box-shadow: var(--shadow-sm);
-}
-
-.agenda-callout-header {
-    display: flex;
-    align-items: flex-start;
-    gap: 14px;
-    margin-bottom: 16px;
-}
-
-.agenda-callout-header i {
-    font-size: 1.6rem;
-    color: var(--accent-teal);
-    margin-top: 2px;
-    flex-shrink: 0;
-}
-
-.agenda-callout-header strong {
-    display: block;
-    font-size: 1.05rem;
-    color: var(--primary-dark);
-    margin-bottom: 2px;
-}
-
-.agenda-callout-header span {
-    font-size: 0.88rem;
-    color: var(--text-muted);
-}
-
-.agenda-callout-actions {
+.conditions-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 10px;
 }
 
-.agenda-callout-actions .btn-sm {
-    padding: 10px 20px;
-    font-size: 0.85rem;
+.condition-tag {
+    background-color: var(--bg-light);
+    color: var(--primary-blue);
+    font-weight: 600;
+    font-size: 0.88rem;
+    padding: 8px 16px;
+    border-radius: var(--radius-full);
+    border: 1px solid rgba(30, 62, 98, 0.12);
 }
 
 /* 9. PRICING & BOOKING SECTION */
@@ -1716,7 +1485,8 @@ ul {
     max-width: 440px;
 }
 
-.footer-links h4, .footer-contact h4 {
+.footer-links h4,
+.footer-contact h4 {
     color: #FFFFFF;
     font-size: 1.1rem;
     margin-bottom: 20px;
@@ -1838,9 +1608,11 @@ ul {
     0% {
         box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
     }
+
     70% {
         box-shadow: 0 0 0 16px rgba(37, 211, 102, 0);
     }
+
     100% {
         box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
     }
@@ -1851,12 +1623,15 @@ ul {
     .nav-list {
         gap: 12px;
     }
+
     .nav-link {
         font-size: 0.84rem;
     }
+
     .doctor-name {
         font-size: 1.05rem;
     }
+
     .doctor-spec {
         font-size: 0.7rem;
     }
@@ -1926,7 +1701,7 @@ ul {
         right: 0;
     }
 
-    .sobre-container, .sobre-container-grid, .hero-profile-grid {
+    .sobre-container {
         grid-template-columns: 1fr;
     }
 
