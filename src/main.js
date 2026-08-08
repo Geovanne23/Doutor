@@ -295,4 +295,67 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    /* 6. BOOKING WIDGET METHOD TABS SWITCHER */
+    const bookingTabBtns = document.querySelectorAll('.booking-tab-btn');
+    const bookingWhatsAppForm = document.getElementById('bookingForm');
+    const bookingDoctoraliaCard = document.getElementById('doctoraliaBookingCard');
+
+    if (bookingTabBtns.length > 0) {
+        bookingTabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const targetMethod = btn.getAttribute('data-method');
+
+                bookingTabBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                if (targetMethod === 'whatsapp') {
+                    if (bookingWhatsAppForm) bookingWhatsAppForm.style.display = 'block';
+                    if (bookingDoctoraliaCard) bookingDoctoraliaCard.style.display = 'none';
+                } else if (targetMethod === 'doctoralia') {
+                    if (bookingWhatsAppForm) bookingWhatsAppForm.style.display = 'none';
+                    if (bookingDoctoraliaCard) bookingDoctoraliaCard.style.display = 'block';
+                }
+            });
+        });
+    }
+
+    /* 7. LGPD COOKIE CONSENT BANNER LOGIC */
+    function initLGPDBanner() {
+        const consentKey = 'lgpd_consent_drgiorgeto';
+        if (localStorage.getItem(consentKey)) return; // Consent already granted
+
+        const bannerHtml = `
+            <div class="lgpd-banner" id="lgpdBanner">
+                <div class="lgpd-text">
+                    <i class="fa-solid fa-cookie-bite" style="color: var(--accent-cyan); margin-right: 6px;"></i>
+                    Utilizamos cookies essenciais para garantir a melhor experiência em nosso site e viabilizar o agendamento de consultas com segurança. Ao continuar navegando, você concorda com nossa 
+                    <a href="politica-de-privacidade.html" target="_blank">Política de Privacidade</a> e <a href="termos-de-uso.html" target="_blank">Termos de Uso</a>.
+                </div>
+                <div class="lgpd-actions">
+                    <button class="btn-lgpd-accept" id="lgpdAcceptBtn">Entendi e Aceito</button>
+                </div>
+            </div>
+        `;
+
+        document.body.insertAdjacentHTML('beforeend', bannerHtml);
+        const lgpdBanner = document.getElementById('lgpdBanner');
+        const lgpdAcceptBtn = document.getElementById('lgpdAcceptBtn');
+
+        setTimeout(() => {
+            if (lgpdBanner) lgpdBanner.classList.add('visible');
+        }, 1200);
+
+        if (lgpdAcceptBtn) {
+            lgpdAcceptBtn.addEventListener('click', () => {
+                localStorage.setItem(consentKey, 'granted_' + new Date().toISOString());
+                if (lgpdBanner) {
+                    lgpdBanner.classList.remove('visible');
+                    setTimeout(() => lgpdBanner.remove(), 500);
+                }
+            });
+        }
+    }
+
+    initLGPDBanner();
+
 });
